@@ -1,7 +1,7 @@
 {
   "name": "it-blaster/sortable-behavior-bundle",
   "type": "symfony-bundle",
-  "description": "Sonata admin sortable for symfony 4",
+  "description": "Sonata admin sortable for symfony 4 ",
   "keywords": [
     "sortable",
     "admin",
