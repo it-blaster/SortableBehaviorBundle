@@ -1,0 +1,25 @@
+services:
+    sortable_behavior.position.orm:
+        class: ItBlaster\SortableBehaviorBundle\Services\PositionORMHandler
+        public: false
+        arguments:
+            - "@doctrine.orm.entity_manager"
+        calls:
+            - [ 'setPositionField', ["%sortable.behavior.position.field%"]]
+            - [ 'setSortableGroups', ["%sortable.behavior.sortable_groups%"]]
+
+    sortable_behavior.position.mongodb:
+        class: ItBlaster\SortableBehaviorBundle\Services\PositionODMHandler
+        public: false
+        arguments:
+            - "@doctrine_mongodb.odm.document_manager"
+        calls:
+            - [ 'setPositionField', ["%sortable.behavior.position.field%"]]
+
+    sortable_behavior.twig.extension:
+        class: ItBlaster\SortableBehaviorBundle\Twig\ObjectPositionExtension
+        arguments:
+            - "@sortable_behavior.position"
+        public: false
+        tags:
+            - { name: twig.extension }

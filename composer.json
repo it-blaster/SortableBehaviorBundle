@@ -1,0 +1,35 @@
+{
+    "name": "it-blaster/sortable-behavior-bundle",
+    "type": "symfony-bundle",
+    "description": "Provides a way to sort your admin listing",
+    "keywords": ["sortable","admin","sonata", "symfony"],
+    "homepage": "https://github.com/it-blaster/SortableBehaviorBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "0x2f8f",
+            "email": "0x2f8f@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "symfony/framework-bundle": ">=2.1",
+        "symfony/form": ">=2.1"
+    },
+    "require-dev": {
+        "gedmo/doctrine-extensions": ">=2.2"
+    },
+    "suggest": {
+        "sonata-project/admin-bundle": "Can be easily integrated with Sonata Admin bundle",
+        "stof/doctrine-extensions-bundle": "1.1.*@dev"
+    },
+    "autoload": {
+        "psr-0": { "ItBlaster\\SortableBehaviorBundle": "" }
+    },
+    "target-dir": "ItBlaster/SortableBehaviorBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
+    }
+}
